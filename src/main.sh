@@ -33,6 +33,7 @@ source "$ROOT_DIR/src/utils/state.sh"
 source "$ROOT_DIR/src/config/options.sh"
 source "$ROOT_DIR/src/components/dependencies.sh"
 source "$ROOT_DIR/src/components/ffmpeg.sh"
+source "$ROOT_DIR/src/components/mandatory.sh"
 
 
 # Version comparison function

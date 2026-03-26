@@ -55,8 +55,10 @@ RAV1E_LIBRARY_TYPE="staticlib"
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
   LDEXEFLAGS="-static -fPIC"
-  CFLAGS+=" -fPIC"
-  CXXFLAGS+=" -fPIC"
+  CFLAGS+=" -fPIC -march=native -mtune=native"
+  CXXFLAGS+=" -fPIC -march=native -mtune=native"
+  LDFLAGS+=" -Wl,-O2 -Wl,--as-needed"
+  EXTRALIBS+=" -lstdc++"
 fi
 
 CONFIGURE_OPTIONS+=("--enable-gpl" "--enable-nonfree")
